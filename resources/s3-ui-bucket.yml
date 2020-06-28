@@ -1,0 +1,31 @@
+Resources:
+  HmdUIBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: ${self:custom.clientS3}
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: "index.html"
+      # Set the CORS policy
+      CorsConfiguration:
+        CorsRules:
+          - AllowedOrigins:
+              - "*"
+            AllowedHeaders:
+              - "*"
+            AllowedMethods:
+              - GET
+              - PUT
+              - POST
+              - DELETE
+              - HEAD
+            MaxAge: 3000
+
+# Print out the name of the bucket that is created
+Outputs:
+  HmdBucketName:
+    Value:
+      Ref: HmdUIBucket
+  ClientURL:
+    Value:
+      Fn::GetAtt: HmdUIBucket.WebsiteURL

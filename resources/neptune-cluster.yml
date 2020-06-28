@@ -1,0 +1,33 @@
+Resources:
+  NeptuneStack:
+    Type: "AWS::CloudFormation::Stack"
+    Properties:
+      TemplateURL: "https://s3.amazonaws.com/aws-neptune-customer-samples/v2/cloudformation-templates/neptune-full-stack-nested-template.json"
+      TimeoutInMinutes: "15"
+      Parameters:
+        EC2SSHKeyPairName: "hmd-ec2-pair"
+        Env: ${self:custom.stage}
+        DbInstanceType: "db.r4.large"
+        EC2ClientInstanceType: "t3.small"
+        SetupGremlinConsole: "true"
+        SetupRDF4JConsole: "true"
+        AttachBulkloadIAMRoleToNeptuneCluster: "true"
+        # DBReplicaIdentifierSuffix: "hmd-read" #read-replica
+        NotebookInstanceType: "none" # SageMaker Notebook access
+
+Outputs:
+  EC2SSHAccess:
+    Value:
+      Fn::GetAtt: NeptuneStack.Outputs.SSHAccess
+  EC2Client:
+    Value:
+      Fn::GetAtt: NeptuneStack.Outputs.EC2Client
+  DBClusterEndpoint:
+    Value:
+      Fn::GetAtt: NeptuneStack.Outputs.DBClusterEndpoint
+  # DBReplicaInstanceEndpoint:
+  #   Value:
+  #     Fn::GetAtt: NeptuneStack.Outputs.DBReplicaInstanceEndpoint
+  GremlinEndpoint:
+    Value:
+      Fn::GetAtt: NeptuneStack.Outputs.GremlinEndpoint
