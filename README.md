@@ -100,4 +100,4 @@ This project is based on [Serverless Stack](http://serverless-stack.com) along w
 
 - Remove step 4 (A) "Setup React app AWS config" by setting environment variables
 - Remove step 4 (B) by pulling Gremlin endpoint/port from environment variables in Lambda functions
-- Remove Deployment step 5 by assigning Lambda Functions to VPC in deployment stage using CloudFormation YAML
+- Remove step 5 by assigning Lambda Functions to VPC in deployment stage using CloudFormation YAML
