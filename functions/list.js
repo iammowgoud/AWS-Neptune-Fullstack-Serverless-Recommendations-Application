@@ -8,9 +8,8 @@ const Graph = gremlin.structure.Graph;
 const DriverRemoteConnection = gremlin.driver.DriverRemoteConnection;
 
 
-////
-// const endpoint = `ws://${process.env.NEPTUNE_ENDPOINT}:${process.env.NEPTUNE_PORT}/gremlin`;
-const endpoint = `wss://neptunedbcluster-m6gsagawv2nw.cluster-cafqxbb12cgh.us-east-2.neptune.amazonaws.com:8182/gremlin`;
+// const endpoint = `ws://${process.env.NEPTUNE_ENDPOINT}:${process.env.NEPTUNE_PORT}/gremlin`; // TODO: fix this
+const endpoint = `wss://neptunedbcluster-XXXXXXX.cluster-XXXXX.us-east-2.neptune.amazonaws.com:8182/gremlin`;
 const graph = new Graph();
 const conn = new DriverRemoteConnection(endpoint, { traversalSource: 'g' });
 const g = graph.traversal().withRemote(conn);

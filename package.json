@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "gremlin": "^3.4.7",
-    "serverless-s3-sync": "^1.14.3",
-    "uuid": "^7.0.3"
+    "serverless-s3-sync": "^1.14.3"
   }
 }
