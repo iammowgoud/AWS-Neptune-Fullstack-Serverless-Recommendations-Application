@@ -75,7 +75,7 @@ This project is based on [Serverless Stack](http://serverless-stack.com) along w
 - Partial deploy: UI only 
     - From root `aws s3 sync app/build s3://S3_BUCKET` (after react building)
 - Partial deploy: Lambda Only
-    - `servereles deplot -f FUNCTIONNAME` - rebuild lambda function and upload zip to S3
+    - `servereles deploy -f FUNCTIONNAME` - rebuild lambda function and upload zip to S3
 
 ## How does it work? How does it access the Graph from UI?
 
