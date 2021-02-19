@@ -37,7 +37,7 @@ This project is based on [Serverless Stack](http://serverless-stack.com) along w
   - S3 to serve UI [resources/s3-ui-bucket.yml](resources/s3-ui-bucket.yml)
   - Neptune Stack [resources/neptune-cluster.yml](resources/neptune-cluster.yml)
   - Cognito User Pool [resources/cognito-user-pool.yml](resources/cognito-user-pool.yml)
-  - Cognito Identity Pool [resources/cognito-identity-pool.yml](resources/cognito-identity-pool.yml)_TEMPLATE.js to config.js`
+  - Cognito Identity Pool [resources/cognito-identity-pool.yml](resources/cognito-identity-pool.yml)
 
 ## Deployment 
 
