@@ -1,9 +1,5 @@
 # Fullstack Serverless Recommendations Application powered by AWS Neptune
 
->
-> [🔗 Demo](http://dev-hmd-client-bucket.s3-website.us-east-2.amazonaws.com/)
->
-
 ## Requirments
 
 - AWS Account (Billing Enabled)
